@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* Variables */
+:root {
+  --editor-bg: #eee;
+	--console-bg: #fff;
+  --editor-border: #181818;
+}
+
+/* Reset Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.environment {
+    height: 100%;
+    width: 90%;
+	margin: auto;
+
+}
+
+.dark-mode {
+  background-color: #181818 !important;
+  color: white !important;
+}
+
+.editor {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.editor__wrapper {
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    background: var(--editor-bg);
+    padding: 2em;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+.editor_body {
+    height: 100%;
+}
+
+.editor_code {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid var(--editor-border);
+}
+
+.console_body {
+    height: 100%;
+}
+
+.editor_console {
+    position: relative;
+    height: 90%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid var(--editor-border);
+}
+
+.editor_console_input {
+    position: relative;
+    height: 10%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid var(--editor-border);
+}
+
+.loader {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+/***************************************************************************************
+*   Title: Three Dots
+*   Author: Zongbin (https://github.com/nzbin)
+*   Date: 09/01/2023
+*   Availability: https://codepen.io/nzbin/pen/GGrXbp  (https://github.com/nzbin/three-dots)
+*	  Some alterations have been made to this code!
+***************************************************************************************/
+.dot-flashing {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #000000;
+  color: #000000;
+  animation: dot-flashing 1s infinite linear alternate;
+  animation-delay: 0.5s;
+}
+.dot-flashing::before, .dot-flashing::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+.dot-flashing::before {
+  left: -45px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #000000;
+  color: #000000;
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+.dot-flashing::after {
+  left: 45px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #000000;
+  color: #000000;
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dot-flashing {
+  0% {
+    background-color: #000000;
+  }
+  50%, 100% {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+}
+/***************************************************************************************/

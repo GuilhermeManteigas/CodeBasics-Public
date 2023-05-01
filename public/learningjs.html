@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- FontAwesome -->
+	<script src="https://kit.fontawesome.com/0de757c1fe.js" crossorigin="anonymous"></script>
+
+	<!-- cookiealert styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
+	
+	<!-- Web Socket -->
+	<script src="/socket.io/socket.io.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/public/css/mystyle.css">
+	
+    <title>Experiment</title>
+
+</head>
+
+<body>
+
+<div id="loaded" >
+	<br><br>
+	<div class="container">
+		<center>
+		<h1>Language B</h1>
+		</center>
+		<br>
+		<h4><b>Due to the time constraints of this experiment we will give a brief explanation on the language B, you don't need to understand everything or memorise
+   		 it but try to look at the examples and see what they each do.</b></h4>
+		
+		<br>
+		<h4><b>Writing to the Screen:</b></h4>
+		<h5>In this language, to write information to the screen, you will have to use the command "console.log();".</h5>
+		<h5>Looking at the example below, what you want to be written on the screen needs to be written inside of the parenthesis. 
+			If this information is text, it needs to be in between two apostrophes. If you wish to write a number, there is no need for an apostrophe.</h5>
+		<div class="card">
+			<div class="card-body">
+				<center><h5 style="padding-bottom:5px;">Example:</h5></center>
+				<div class="row">
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<b>Code:</b>
+							</div>
+							<div class="card-body" style="user-select: none;">
+								<h6><code>console.log('Hello my friend');</code></h6>
+								<h6><code>console.log(2023);</code></h6>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<b>Output:</b>
+							</div>
+							<div class="card-body" style="user-select: none;">
+								<h6>Hello my friend</h6>
+								<h6>2023</h6>
+							</div>
+						</div>
+					</div>
+				  </div>
+			</div>
+		</div>
+ 
+		<br><br>
+		<h4><b>Variables and calculations:</b></h4>
+		<h5>A variable is a place where you can store data. In this language, to create a variable, you need to write "number = X ;", 
+			where X is the value you want to write. This will store the desired value in the variable number.</h5>
+		<h5>To perform calculations, you can do it as if you were using a calculator. For example, you could write "5 + 5", this will give the result of 10 back. 
+			You can also do calculations with variables you created previously. For example, we could do "5 + 5 + number", where number is the variable. </h5>
+		<div class="card">
+			<div class="card-body">
+				<center><h5 style="padding-bottom:5px;">Example:</h5></center>
+				<div class="row">
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<b>Code:</b>
+							</div>
+							<div class="card-body" style="user-select: none;">
+								<h6><code>x = 5;</code></h6>
+								<h6><code>result = 10 + x;</code></h6>
+								<h6><code>console.log(result);</code></h6>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<b>Output:</b>
+							</div>
+							<div class="card-body" style="user-select: none;">
+								<h6>15</h6>
+								<h6>&nbsp;</h6>
+								<h6>&nbsp;</h6>
+							</div>
+						</div>
+					</div>
+				  </div>
+			</div>
+		</div>
+
+		<br><br>
+		<h4><b>Conditional statements:</b></h4>
+		<h5>In this programming language, you can use conditional statements by inputting "if" and "else". These statements allow you to write conditions on your programme. 
+			For example, a statement could be made that if a variable is bigger than 10, the programme must write a message on the screen. If the number is below 10, 
+			then a different message would be written. This is useful for building logic into your programme. 
+		</h5>
+		<h5>These statements come in the form of "if(CONDITION){CODE}else{CODE}".</h5>
+		<div class="card">
+			<div class="card-body">
+				<center><h5 style="padding-bottom:5px;">Example:</h5></center>
+				<div class="row">
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<b>Code:</b>
+							</div>
+							<div class="card-body" style="user-select: none;">
+								<h6><code>x = 10;</code></h6>
+								<h6><code>if(x > 5){</code></h6>
+								<h6><code>console.log("x is bigger than 5");</code></h6>
+								<h6><code>} else {</code></h6>
+								<h6><code>console.log("x is smaller than 5");</code></h6>
+								<h6><code>}</code></h6>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<b>Output:</b>
+							</div>
+							<div class="card-body" style="user-select: none;">
+								<h6>x is bigger than 5</h6>
+								<h6>&nbsp;</h6>
+								<h6>&nbsp;</h6>
+								<h6>&nbsp;</h6>
+								<h6>&nbsp;</h6>
+								<h6>&nbsp;</h6>
+							</div>
+						</div>
+					</div>
+				  </div>
+			</div>
+		</div>
+
+		<br><br>
+		<h4><b>Functions:</b></h4>
+		<h5>In this programming language, you can use functions. These are sub programmes inside your programme that can be called when needed. 
+			They can be used to reduce the number of times you need to write code, by allowing you to write it once and calling it at a later stage.</h5>
+		<h5>Functions are written in the form pf "FunctionName(parameters){CODE}". And they can later be called by writing "FunctionName(parameters);"</h5>
+		<h5>It is important to note that parameters are optional and can be left black if they are not needed.</h5>
+		<div class="card">
+			<div class="card-body">
+				<center><h5 style="padding-bottom:5px;">Example:</h5></center>
+				<div class="row">
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<b>Code:</b>
+							</div>
+							<div class="card-body" style="user-select: none;">
+								<h6><code>function function_square(number){</code></h6>
+								<h6><code>console.log(number * number);</code></h6>
+								<h6><code>}</code></h6>
+								<h6><code>&nbsp;</code></h6>
+								<h6><code>function_square(10);</code></h6>
+								<h6><code>function_square(5);</code></h6>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<b>Output:</b>
+							</div>
+							<div class="card-body" style="user-select: none;">
+								<h6>100</h6>
+								<h6>25</h6>
+								<h6>&nbsp;</h6>
+								<h6>&nbsp;</h6>
+								<h6>&nbsp;</h6>
+								<h6>&nbsp;</h6>
+							</div>
+						</div>
+					</div>
+				  </div>
+			</div>
+		</div>
+
+		<br><br>
+		<h4><b>Loops:</b></h4>
+		<h5>In this programming language, you can use loops. These are pieces of code that will run until a condition is met. They can be used to make repetitive tasks easier.</h5>
+		<h5>We will be using "for" loops these are written in the form of "for(variable;condition;increment){CODE}".</h5>
+		<div class="card">
+			<div class="card-body">
+				<center><h5 style="padding-bottom:5px;">Example:</h5></center>
+				<div class="row">
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<b>Code:</b>
+							</div>
+							<div class="card-body" style="user-select: none;">
+								<h6><code>for(variable = 0; variable < 3; variable = variable + 1){</code></h6>
+								<h6><code>console.log(variable);</code></h6>
+								<h6><code>}</code></h6>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<b>Output:</b>
+							</div>
+							<div class="card-body" style="user-select: none;">
+								<h6>0</h6>
+								<h6>1</h6>
+								<h6>2</h6>
+							</div>
+						</div>
+					</div>
+				  </div>
+			</div>
+		</div>
+
+		<br><br>
+		<h4><b>Arrays:</b></h4>
+				<h5>In this programming language, you can use arrays. These allow you to store multiple numbers in one variable.</h5>
+				<br>
+				<h5><b>Declaring an array:</b></h5>
+				<div class="card">
+					<div class="card-body">
+						<center><h5 style="padding-bottom:5px;">Example:</h5></center>
+						<div class="row">
+							<div class="col">
+								<div class="card">
+									<div class="card-header">
+										<b>Code:</b>
+									</div>
+									<div class="card-body" style="user-select: none;">
+										<h6><code>array = [1,2,3,4,5];</code></h6>
+										<h6><code>console.log(array);</code></h6>
+										<h6><code></code></h6>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card">
+									<div class="card-header">
+										<b>Output:</b>
+									</div>
+									<div class="card-body" style="user-select: none;">
+										<h6>[1,2,3,4,5]</h6>
+										<h6></h6>
+										<h6></h6>
+									</div>
+								</div>
+							</div>
+						  </div>
+					</div>
+				</div>
+				<br>
+				<h5><b>Adding a number to an array:</b></h5>
+				<div class="card">
+					<div class="card-body">
+						<center><h5 style="padding-bottom:5px;">Example:</h5></center>
+						<div class="row">
+							<div class="col">
+								<div class="card">
+									<div class="card-header">
+										<b>Code:</b>
+									</div>
+									<div class="card-body" style="user-select: none;">
+										<h6><code>array = [1,2,3,4,5];</code></h6>
+										<h6><code>array.push(6);</code></h6>
+										<h6><code>console.log(array);</code></h6>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card">
+									<div class="card-header">
+										<b>Output:</b>
+									</div>
+									<div class="card-body" style="user-select: none;">
+										<h6>[1,2,3,4,5,6]</h6>
+										<h6></h6>
+										<h6></h6>
+									</div>
+								</div>
+							</div>
+						  </div>
+					</div>
+				</div>
+				<br>
+				<h5><b>Remove a number from an array:</b></h5>
+				<div class="card">
+					<div class="card-body">
+						<center><h5 style="padding-bottom:5px;">Example:</h5></center>
+						<div class="row">
+							<div class="col">
+								<div class="card">
+									<div class="card-header">
+										<b>Code:</b>
+									</div>
+									<div class="card-body" style="user-select: none;">
+										<h6><code>array = [1,2,3,4,5];</code></h6>
+										<h6><code>array.splice(array.indexOf(3), 1);</code></h6>
+										<h6><code>console.log(array);</code></h6>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card">
+									<div class="card-header">
+										<b>Output:</b>
+									</div>
+									<div class="card-body" style="user-select: none;">
+										<h6>[1,2,4,5]</h6>
+										<h6></h6>
+										<h6></h6>
+									</div>
+								</div>
+							</div>
+						  </div>
+					</div>
+				</div>
+				<br>
+				<h5><b>Sort an array:</b></h5>
+				<div class="card">
+					<div class="card-body">
+						<center><h5 style="padding-bottom:5px;">Example:</h5></center>
+						<div class="row">
+							<div class="col">
+								<div class="card">
+									<div class="card-header">
+										<b>Code:</b>
+									</div>
+									<div class="card-body" style="user-select: none;">
+										<h6><code>array = [4,3,2,1,5];</code></h6>
+										<h6><code>array.sort();</code></h6>
+										<h6><code>console.log(array);</code></h6>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card">
+									<div class="card-header">
+										<b>Output:</b>
+									</div>
+									<div class="card-body" style="user-select: none;">
+										<h6>[1,2,3,4,5]</h6>
+										<h6></h6>
+										<h6></h6>
+									</div>
+								</div>
+							</div>
+						  </div>
+					</div>
+				</div>
+		
+		<br>
+		<center><button id="Next" type="button" class="btn btn-lg btn-primary" style="width: 80%;" onclick="location.href = '/experimentb';">Next Page</button></center>
+		
+	<div>
+
+	<br>
+
+	<!-- Bootstrap-Cookie-Alert -->
+	<div class="alert text-center cookiealert" role="alert">
+		<b>Do you like cookies?</b> &#x1F36A; This website uses cookies to ensure you get the best experience. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
+
+		<button type="button" class="btn btn-primary btn-sm acceptcookies">I agree</button>
+	</div>
+
+</div>
+
+	<!-- Include cookiealert script -->
+	<script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- FontAwesome -->
+	<script src="https://kit.fontawesome.com/0de757c1fe.js" crossorigin="anonymous"></script>
+
+	<!-- cookiealert styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
+	
+	<!-- Web Socket -->
+	<script src="/socket.io/socket.io.js"></script>
+
+	<link rel="stylesheet" href="/public/css/mystyle.css">
+	
+    <title>Experiment</title>
+
+</head>
+
+<body>
+
+<div id="loaded" >
+
+	<br><br>
+
+	<div class="container">
+		<h6 style="text-align: right;">In Meston Building King's College Aberdeen AB24 3UE</h6>
+		<h6 style="text-align: right;">+44 (0)1224 272605</h6>
+		<h6 style="text-align: right;">ncs.office@abdn.ac.uk </h6>
+		<center>
+		<h2><b>PARTICIPANT INFORMATION SHEET</b></h2>
+		<h2>CodeBasics: An Educational Programming Language and Development Environment for Introduction to Programming</h2>
+		</center>
+		<br>
+		<h5>Principal Investigator(s): Guilherme de Carvalho Manteigas </h5>
+		<h5>Other researchers: N/A </h5>
+		<h5>Supervisor(s) [for students]: Dr Nigel Beacham </h5>
+		<br>
+		<h5>I am an undergraduate BSc Computing Science at the University of Aberdeen. I would like to invite you to consider participating in the research project CodeBasics: An Educational Programming Language and Development Environment for Introduction to Programming.  Below is some information about the project, to help you decide whether you would like to take part.</h5>
+		<br>
+		<h5><b>Participation in the research project is completely voluntary.  You can withdraw from the project at any time, without having to give a reason.</b></h5>
+		<br>
+		<h5>AIMS</h5>
+		<h5>The aim of the project is to identify the hurdles new programmers have to overcome when learning their first programming language. Based on this identification, this research will then aim to develop a programming language targeted at people with little to no experience in programming that would address those hurdles. The final aim of the study would be to test the created language against an existing language to test whether it is significantly easier to use. </h5>
+		<br>
+		<h5>WHAT YOU WILL BE ASKED TO DO</h5>
+		<h5>This survey is the first part of the project and consists of answering some questions about which aspects of learning programming participants find challenging, as well as providing some demographic data.</h5>
+		<h5>This experiment should not take more than 20 minutes of your time.</h5>
+		<br>
+		<h5>RISKS</h5>
+		<h5>The questions asked in this survey are not of a distressing nature and should not trigger any adverse emotional reaction. However, in the highly unlikely event it would, participants are free to skip any questions they do not wish to answer. Additionally, participants are welcome to contact the research team to be signposted to relevant support to address any distress experienced. </h5>
+		<h5>The researcher’s contact details are: u04gd19@abdn.ac.uk </h5>
+		<br>
+		<h5>DATA MANAGEMENT AND STORAGE</h5>
+		<h5>Data will be stored and managed in line with all relevant University policies including the Data Protection Policy, Information Security Policy, and Research Data Management Policy and Guidance.</h5>
+		<h5>Your data will be stored on the University secure H drive. The data you provide will be deleted after 5 years.</h5>
+		<br>
+		<h5>CONFIDENTIALITY AND ANONYMITY</h5>
+		<h5>The University’s Privacy Notice for Research Participants is available <a href="https://www.abdn.ac.uk/about/privacy/research-participants-938.php">here</a></h5>
+		<h5>Raw data and the identity of participants will not be released to anyone outside the research team. The data you provide will be analysed and may be used in publications, dissertations, reports or presentations derived from the research project, but this will be done in such a way that your identity is not disclosed.  Data will be anonymised by not asking for any names in the survey so that individual survey answers cannot be traced back to the participant once data is submitted. </h5>
+		<br>
+		<h5>CONSENT</h5>
+		<h5>If you agree to take part in the research, you will be asked to indicate your consent by pressing the button at the bottom of this page.</h5>
+		<br>
+		<h5>Thank you for considering taking part in this research.</h5>
+		<br>
+		<h5>If you have any questions about this research please contact:</h5>
+		<h5>Guilherme de Carvalho Manteigas | u04gd19@abdn.ac.uk</h5>
+		<h5>Dr Nigel Beacham | +44 (0)1224 273878 | n.beacham@abdn.ac.uk</h5>
+		<br>
+		<h5>For any queries regarding ethical concerns you may contact the Course/Programme Coordinator at the University of Aberdeen</h5>
+		<h5>Professor Felipe Meneguzzi</h5>
+		<h5>Email: felipe.meneguzzi@abdn.ac.uk</h5>
+		<br>
+		<h5>This research project was approved by the School of Natural and Computing Sciences on 14/03/2023.</h5>
+		<br>
+		<br>
+		<center><button id="Next" type="button" class="btn btn-lg btn-primary" style="width: 60%;" onclick="location.href = '/consentform';">I agree to take part in the research</button></center>
+		<br>
+		<br>
+	<div>
+
+	<br>
+
+	<!-- Bootstrap-Cookie-Alert -->
+	<div class="alert text-center cookiealert" role="alert">
+		<b>Do you like cookies?</b> &#x1F36A; This website uses cookies to ensure you get the best experience. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
+
+		<button type="button" class="btn btn-primary btn-sm acceptcookies">I agree</button>
+	</div>
+
+</div>
+
+	<!-- Include cookiealert script -->
+	<script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
+		
+</body>
+
+</html>
+
